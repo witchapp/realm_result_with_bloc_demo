@@ -23,8 +23,6 @@ class ItemService {
   }
 
   bool addItem(String text) {
-    final storagePath = Configuration.defaultStoragePath;
-    print(storagePath);
     try {
       _realm.write(() {
         _realm.add<Item>(Item(text, false));
